@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "da2095f7-be11-4313-90f4-e28f64da1daf",
+		"name": "ActionHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add action house",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"actionhouse1\"}"
+				},
+				"url": {
+					"raw": "{{url}}/actionhouse/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actionhouse",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add action",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\": \"action3\",\r\n    \"description\" : \"first Action\",\r\n    \"startingTime\" : \"2020-06-29\",\r\n    \"endTime\" : \"2020-07-29T10:45:05\",\r\n    \"startPrice\" : 10,\r\n    \"currentPrice\" : 20,\r\n    \"actionHouseId\" : 1\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/action/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"action",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add action bid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"bidder\": \"bidder3\",\r\n    \"description\" : \"first bid\",\r\n    \"price\" : 46.2,\r\n    \"actionId\" : \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/actionbid/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actionbid",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all actionhouses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/actionhouse/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actionhouse",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get actions by action house id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/actionhouse/1/actions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actionhouse",
+						"1",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get action_bids by acion id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/action/1/bids",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"action",
+						"1",
+						"bids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get action winner by action id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/action/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"action",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get actionBid by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/actionbid/bidder3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actionbid",
+						"bidder3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete action by action id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/action/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"action",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete actionhouse by name",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/actionhouse/actionhouse1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actionhouse",
+						"actionhouse1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
